@@ -6,6 +6,28 @@ export default defineType({
   type: 'document',
   fields: [
     {
+      name: 'title',
+      title: 'Title',
+      type: 'string',
+      validation(rule: Rule): Rule {
+        return rule.required()
+      },
+    },
+    {
+      name: 'slug',
+      title: 'Slug',
+      type: 'slug',
+      options: {
+        slugify(input: string): string {
+          return input.toLowerCase().replaceAll(/\s+/g, '-').slice(0, 200)
+        },
+        source: 'title',
+      },
+      validation(rule: Rule): Rule {
+        return rule.required()
+      },
+    },
+    {
       name: 'updatedAt',
       title: 'Updated At',
       type: 'datetime',
