@@ -64,12 +64,15 @@ export default defineType({
       validation(rule: Rule): Rule {
         return rule.required()
       },
-      to: [{type: 'author'}],
+      to: [{type: 'featuredImage'}],
     },
     {
       name: 'tags',
       title: 'Tags',
       type: 'array',
+      validation(rule: Rule): Rule {
+        return rule.required()
+      },
       of: [{type: 'string'}],
       options: {
         list: [
