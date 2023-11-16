@@ -83,6 +83,7 @@ export default defineType({
           },
           {title: 'Some Designy Things', value: 'design'},
           {title: 'Learn Web Dev', value: 'courseReview'},
+          {title: 'No Category', value: 'noCategory'},
         ],
       },
     },
