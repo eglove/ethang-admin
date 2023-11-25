@@ -14,22 +14,6 @@ export default defineType({
       },
     },
     {
-      name: 'height',
-      title: 'Height',
-      type: 'number',
-      validation(rule: Rule): Rule {
-        return rule.required()
-      },
-    },
-    {
-      name: 'width',
-      title: 'Width',
-      type: 'number',
-      validation(rule: Rule): Rule {
-        return rule.required()
-      },
-    },
-    {
       name: 'image',
       title: 'Image',
       type: 'image',
