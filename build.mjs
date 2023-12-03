@@ -1,6 +1,6 @@
 import { projectBuilder } from "@ethang/project-builder/project-builder.js";
 
-await projectBuilder("website-remix", "master", {
+await projectBuilder("ethang-admin", "main", {
   preVersionBumpScripts: ["UPDATE", "PRUNE"],
   postVersionBumpScripts: ["DEDUPE", "LINT", "BUILD"],
   isIgnoringBuild: true,
