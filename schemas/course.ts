@@ -60,7 +60,7 @@ export default defineType({
       },
       of: [
         {
-          type: 'string',
+          type: 'url',
         },
       ],
     },
